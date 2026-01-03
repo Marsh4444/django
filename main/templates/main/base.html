@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
 </head>
 <body>
 
-    <h1>My Portfolio Site</h1>
+    <!-- Top: Site Name -->
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
 
+    <!-- Middle: Navigation -->
     <nav>
-        <a href="/">Home</a> |
-        <a href="/about/">About</a> |
-        <a href="/projects/">Projects</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/projects/">Projects</a></li>
+        </ul>
     </nav>
 
-    <hr>
 
-    <!-- Page content goes here -->
-    {% block content %}
-    {% endblock %}
-
-    <hr>
-    <p>© 2026 Holyfield</p>
+    <!-- Bottom: Page Content -->
+    <main>
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </main>
 
 </body>
 </html>
