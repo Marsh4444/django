@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.home, name='home'), #views.home → run the home function
     path('about/', views.about, name='about'), #name → label for later use (links)
     path('projects/', views.projects, name='projects'), 
+    path('contact/', views.contact, name='contact'),
 ]

@@ -10,3 +10,6 @@ def about(request):
 
 def projects(request):
     return render(request, "main/projects.html")
+
+def contact(request):
+    return render(request, "main/contact.html")
