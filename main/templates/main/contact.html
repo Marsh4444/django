@@ -1,21 +1,18 @@
 {% extends "main/base.html" %}
 
-{% block title %}Contact{% endblock %}
-
 {% block content %}
-<div class="card">
+<section class="contact-section">
+
     <h2>Contact Me</h2>
+    <p>Feel free to reach out using the form below.</p>
 
-    <p>
-        If you’d like to reach out, collaborate, or just say hello,
-        feel free to contact me.
-    </p>
+    <form method="post" class="contact-form">
+        {% csrf_token %}
 
-    <p>
-        📧 Email: holyfield444@gmail.com <br>
-        🐦 X: @0xeMarsh <br>
-        📍 Location: Nigeria <br>
-        💼 Open to opportunities & learning
-    </p>
-</div>
+        {{ form.as_p }}
+
+        <button type="submit">Send Message</button>
+    </form>
+
+</section>
 {% endblock %}

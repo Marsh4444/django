@@ -6,4 +6,5 @@ urlpatterns = [
     path('about/', views.about, name='about'), #name → label for later use (links)
     path('projects/', views.projects, name='projects'), 
     path('contact/', views.contact, name='contact'),
+    path('contact/success/', views.contact_success, name='contact_success'),
 ]
