@@ -1,16 +1,173 @@
-{% extends "main/base.html" %}
+{% extends 'main/base.html' %}
+{% block title %}Projects - Nwadike Holyfield{% endblock %}
 
-{% block title %}Projects{% endblock %}
+{% block description %}Portfolio projects by Nwadike Holyfield - Django applications, REST APIs, and backend solutions{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>Projects</h2>
+<section>
+    <h1 style="color: blueviolet;"><b>My Projects</b></h1>
+    <p>Here are some of the projects I've been working on. Each project represents a step in my learning journey.</p>
+</section>
 
+<section>
+    <article>
+        <h2>1. Personal Portfolio Website</h2>
+        <p><strong>Status:</strong> In Progress</p>
+        <p><strong>Technologies:</strong> Django, HTML, CSS (coming soon), PostgreSQL</p>
+        <p><strong>Description:</strong> A full-stack portfolio website built with Django to showcase my projects and skills. Features include project showcase, contact form with database storage, and responsive design.</p>
+        
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Dynamic content management via Django admin</li>
+            <li>Contact form with database integration</li>
+            <li>Semantic HTML structure</li>
+            <li>Responsive design (Week 2)</li>
+        </ul>
+        
+        <p><strong>Tech Stack:</strong></p>
+        <table border="1" width="400">
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Django</td>
+                <td>Backend framework</td>
+            </tr>
+            <tr>
+                <td>PostgreSQL</td>
+                <td>Database</td>
+            </tr>
+            <tr>
+                <td>HTML/CSS</td>
+                <td>Frontend structure & styling</td>
+            </tr>
+        </table>
+        <br>
+        <p>
+            <a style="color: blueviolet;" href="https://github.com/Marsh4444/portfolio" target="_blank"><b>View on GitHub</b></a> | 
+            <a style="color: blueviolet;" href="#"><b>Live Demo (Coming Soon)</b></a>
+        </p>
+    </article>
+    <br>
+    
+    <hr>
+    
+    <article>
+        <h2>2. Django Todo Application</h2>
+        <p><strong>Status:</strong> Coming Soon (Week 3)</p>
+        <p><strong>Technologies:</strong> Django, PostgreSQL, Django Forms</p>
+        <p><strong>Description:</strong> A task management application with full CRUD functionality. Users can create, read, update, and delete tasks with user authentication.</p>
+        
+        <p><strong>Planned Features:</strong></p>
+        <ul>
+            <li>User registration and authentication</li>
+            <li>Create, edit, and delete tasks</li>
+            <li>Mark tasks as complete/incomplete</li>
+            <li>Filter tasks by status</li>
+            <li>User-specific task lists</li>
+        </ul>
+        
+        <p><strong>Learning Goals:</strong></p>
+        <ul>
+            <li>Django forms and validation</li>
+            <li>User authentication system</li>
+            <li>CRUD operations</li>
+            <li>Database relationships</li>
+        </ul>
+    </article>
+    
+    <hr>
+    
+    <article>
+        <h2>3. Django Blog Application</h2>
+        <p><strong>Status:</strong> Coming Soon (Week 4)</p>
+        <p><strong>Technologies:</strong> Django, PostgreSQL, Django REST Framework</p>
+        <p><strong>Description:</strong> A full-featured blog platform with posts, comments, categories, and user profiles. Includes admin panel for content management.</p>
+        
+        <p><strong>Planned Features:</strong></p>
+        <ul>
+            <li>Create and publish blog posts</li>
+            <li>Comment system</li>
+            <li>Post categories and tags</li>
+            <li>User profiles with avatars</li>
+            <li>Post pagination</li>
+            <li>Search functionality</li>
+        </ul>
+        
+        <p><strong>Learning Goals:</strong></p>
+        <ul>
+            <li>Model relationships (ForeignKey, ManyToMany)</li>
+            <li>File uploads (images)</li>
+            <li>Pagination</li>
+            <li>Advanced queries</li>
+        </ul>
+    </article>
+    
+    <hr>
+    
+    <article>
+        <h2>4. Task Manager REST API</h2>
+        <p><strong>Status:</strong> Planned (Week 6-9)</p>
+        <p><strong>Technologies:</strong> Django REST Framework, JWT Authentication, PostgreSQL</p>
+        <p><strong>Description:</strong> A RESTful API for task management with teams, projects, and tasks. Features JWT authentication, permissions, and real-time updates.</p>
+        
+        <p><strong>Planned Features:</strong></p>
+        <ul>
+            <li>RESTful API endpoints</li>
+            <li>JWT authentication</li>
+            <li>Team collaboration</li>
+            <li>Real-time task updates (WebSockets)</li>
+            <li>Docker deployment</li>
+        </ul>
+    </article>
+</section>
+
+<section>
+    <h2>Skills Gained Through Projects</h2>
+    <table border="1" width="600">
+        <tr>
+            <th>Skill Category</th>
+            <th>Technologies</th>
+            <th>Project</th>
+        </tr>
+        <tr>
+            <td>Backend Development</td>
+            <td>Django, Python</td>
+            <td>All Projects</td>
+        </tr>
+        <tr>
+            <td>Database Management</td>
+            <td>PostgreSQL, Django ORM</td>
+            <td>Portfolio, Todo, Blog</td>
+        </tr>
+        <tr>
+            <td>API Development</td>
+            <td>Django REST Framework</td>
+            <td>Task Manager API</td>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>Django Auth, JWT</td>
+            <td>Todo, Blog, Task Manager</td>
+        </tr>
+        <tr>
+            <td>Frontend Basics</td>
+            <td>HTML, CSS</td>
+            <td>Portfolio</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>What's Next?</h2>
+    <p>I'm continuously learning and building. Upcoming projects include:</p>
     <ul>
-        <li>Portfolio Website (Django)</li>
-        <li>Employee Directory</li>
-        <li>Learning Log App</li>
-        <li>More coming soon...</li>
+        <li>AI-powered applications with OpenAI API</li>
+        <li>RAG (Retrieval Augmented Generation) systems</li>
+        <li>Production-ready SaaS applications</li>
+        <li>Docker and deployment automation</li>
     </ul>
-</div>
+    <p><a href="{% url 'contact' %}">Get in touch</a> if you'd like to collaborate!</p>
+</section>
 {% endblock %}

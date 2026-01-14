@@ -3,33 +3,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}My Portfolio{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nwadike Holyfield - Backend Developer{% endblock %}</title>
+    <meta name="description" content="{% block description %}Portfolio of Nwadike Holyfield - Python & Django Developer{% endblock %}">
+    <meta name="keywords" content="Python, Django, Backend Developer, RESTful APIs">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
-    <!-- Top: Site Name -->
     <header>
-        <h1>My Portfolio</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a> | 
+            <a href="{% url 'about' %}">About</a> | 
+            <a href="{% url 'projects' %}">Projects</a> | 
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
     </header>
 
-    <!-- Middle: Navigation -->
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- Bottom: Page Content -->
     <main>
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
         {% block content %}
-        <!-- Page-specific content goes here -->
         {% endblock %}
     </main>
 
+    <footer>
+        <hr>
+        <p>&copy; 2026 Nwadike Holyfield. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/Marsh4444" target="_blank">GitHub</a> | 
+            <a href="https://x.com/0xeMarsh" target="_blank">Twitter/X</a> | 
+            <a href="mailto:holyfield444@gmail.com">Email</a>
+        </p>
+    </footer>
 </body>
 </html>

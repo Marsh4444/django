@@ -1,22 +1,77 @@
-{% extends "main/base.html" %}
-
-{% block title %}Home{% endblock %}
+{% extends 'main/base.html' %}
+{% block title %}Nwadike Holyfield - Backend Developer{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>My Portfolio</h2>
+<section class="card">
+    <h1>Hi, I'm Nwadike Holyfield</h1>
+    <h2>Backend Developer | Python & Django Specialist</h2>
+    <p>I build robust web applications and RESTful APIs using Django and Python.</p>
+</section>
 
-    <p>
-        This is my personal portfolio website built with Django.
-        It showcases my learning journey, projects, and growth as a developer.
-    </p>
-
-    <h3>Current Focus</h3>
+<section class="card">
+    <h2>What I Do</h2>
+    <p>I specialize in backend development with a focus on:</p>
     <ul>
-        <li>Learning Django</li>
-        <li>Building real projects</li>
-        <li>Growing step by step</li>
+        <li><strong>Web Application Development</strong> - Building scalable Django applications</li>
+        <li><strong>RESTful API Design</strong> - Creating clean, efficient APIs with Django REST Framework</li>
+        <li><strong>Database Design</strong> - Designing and optimizing PostgreSQL databases</li>
+        <li><strong>Authentication & Security</strong> - Implementing secure user authentication systems</li>
     </ul>
-</div>
-{% endblock %}
+</section>
 
+<section>
+    <b>
+    <h2>Current Focus</h2>
+    <p>I'm currently learning:</p>
+    <ul>
+        <li>HTML & CSS for better full-stack understanding</li>
+        <li>Django REST Framework for building APIs</li>
+        <li>Docker for containerization</li>
+        <li>AI integration with Django applications</li>
+    </ul>
+    </b>
+</section>
+
+<section>
+    <b>
+    <h2>Featured Skills</h2>
+    <table border="1" width="500">
+        <tr align="center" >
+            <th width="250">Skill</th>
+            <th width="250">Level</th>
+        </tr>
+        <tr align="center" >
+            <td>Python</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr align="center">
+            <td>Django</td>
+            <td>Learning</td>
+        </tr>
+        <tr align="center">
+            <td>PostgreSQL</td>
+            <td>Beginner</td>
+        </tr>
+        <tr align="center">
+            <td>RESTful APIs</td>
+            <td>Learning</td>
+        </tr>
+        <tr align="center">
+            <td>Git & GitHub</td>
+            <td>Beginner</td>
+        </tr>
+    </table>
+    </b>
+</section>
+
+<section>
+    <b>
+    <h2>Let's Build Something Together</h2>
+    <p>I'm open to freelance projects, collaborations, and full-time opportunities.</p>
+    <p>
+        <a href="{% url 'projects' %}"><b>View My Projects</b></a> | 
+        <a href="{% url 'contact' %}"><b>Get In Touch</b></a>
+    </p>
+    </b>
+</section>
+{% endblock %}

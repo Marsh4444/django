@@ -1,18 +1,70 @@
-{% extends "main/base.html" %}
+{% extends 'main/base.html' %}
+{% block title %}Contact Me - Nwadike Holyfield{% endblock %}
 
 {% block content %}
-<section class="contact-section">
+<div class="contact-section">  <!-- Add this wrapper -->
+    <section class="card">
+        <h1>Get In Touch</h1>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+    </section>
 
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out using the form below.</p>
+    <section class="card">
+        <h2>Contact Information</h2>
+        <table>  <!-- Remove border="1" width="400" -->
+            <tr>
+                <th>Platform</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><a href="mailto:holyfield444@gmail.com">holyfield444@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td><a href="https://github.com/Marsh4444" target="_blank">@Marsh4444</a></td>
+            </tr>
+            <tr>
+                <td>Twitter/X</td>
+                <td><a href="https://x.com/0xeMarsh" target="_blank">@0xeMarsh</a></td>
+            </tr>
+        </table>
+    </section>
 
-    <form method="post" class="contact-form">
-        {% csrf_token %}
+    <section class="contact-form card">  <!-- Add card class -->
+        <h2>Send Me a Message</h2>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div>
+                <label for="id_name">Name: *</label>
+                {{ form.name }}
+            </div>
 
-        {{ form.as_p }}
+            <div>
+                <label for="id_email">Email: *</label>
+                {{ form.email }}
+            </div>
 
-        <button type="submit">Send Message</button>
-    </form>
+            <div>
+                <label for="id_subject">Subject:</label>
+                {{ form.subject }}
+            </div>
 
-</section>
+            <div>
+                <label for="id_message">Message: *</label>
+                {{ form.message }}
+            </div>
+
+            <button type="submit">Send Message</button>
+            <button type="reset">Clear Form</button>
+        </form>
+        
+        <p><small>* Required fields</small></p>
+    </section>
+
+    <section class="card">
+        <h2>Response Time</h2>
+        <p>I typically respond within <strong>24-48 hours</strong> on weekdays. For urgent matters, please reach out via email directly.</p>
+    </section>
+</div>
 {% endblock %}

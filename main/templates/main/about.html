@@ -1,21 +1,87 @@
-{% extends "main/base.html" %}
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About Me - Nwadike Holyfield{% endblock %}
 
-{% block title %}About{% endblock %}
+{% block description %}About Nwadike Holyfield - Python Developer specializing in Django and backend development{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>About Me</h2>
-
+<section class="card" style="text-align: center;">
+    <h1>About Me</h1>
+    <img src="{% static 'images/profile.jpg' %}" alt="Nwadike Holyfield" style="width: 200px; border-radius: 50%; margin: 20px auto; display: block; border: 4px solid #667eea;">
     <p>
-        <h3>Holyfield Nwadike</h3>
-        <p>A Backend developer learning Django and modern web development.
-        I enjoy breaking very complex concepts into simple, practical ideas while building real projects step by step.</p>
+        I'm <strong>Nwadike Holyfield</strong>, a Python developer specializing in backend development 
+        and building web applications with Django. I'm currently expanding my skills in RESTful API 
+        development and database design.
     </p>
+    <p>
+        I enjoy breaking complex concepts into simple, practical ideas while building real projects 
+        step by step. My goal is to create efficient, scalable backend solutions.
+    </p>
+</section>
 
+<section class="card">
+    <h2>Technical Skills</h2>
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Level</th>
+            <th>Experience</th>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Intermediate</td>
+            <td>1+ year</td>
+        </tr>
+        <tr>
+            <td>Django</td>
+            <td>Learning</td>
+            <td>3 months</td>
+        </tr>
+        <tr>
+            <td>RESTful APIs</td>
+            <td>Learning</td>
+            <td>2 months</td>
+        </tr>
+        <tr>
+            <td>Database Design</td>
+            <td>Learning</td>
+            <td>2 months</td>
+        </tr>
+        <tr>
+            <td>Git & Version Control</td>
+            <td>Beginner</td>
+            <td>3 months</td>
+        </tr>
+    </table>
+</section>
+
+<section class="card">
+    <h2>What I'm Learning</h2>
     <ul>
-        <li>Backend Development</li>
-        <li>Problem Solving</li>
-        <li>Continuous Learning</li>
+        <li>HTML & CSS for better full-stack understanding</li>
+        <li>Django REST Framework for building APIs</li>
+        <li>PostgreSQL database management</li>
+        <li>Docker for containerization</li>
     </ul>
-</div>
+</section>
+
+<section class="card">
+    <h2>Interests & Hobbies</h2>
+    <ul>
+        <li>Playing soccer</li>
+        <li>Writing songs</li>
+        <li>Problem solving & coding challenges</li>
+        <li>Open source contribution</li>
+        <li>Traveling and exploring new cultures</li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>Connect With Me</h2>
+    <p style="text-align: center;">
+        <a href="https://github.com/Marsh4444" target="_blank">GitHub</a> | 
+        <a href="https://x.com/0xeMarsh" target="_blank">Twitter/X</a> | 
+        <a href="mailto:holyfield444@gmail.com">Email</a>
+    </p>
+</section>
 {% endblock %}
